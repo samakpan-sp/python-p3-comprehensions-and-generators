@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 def return_evens(num_list):
-    evens = [ n % 2 == 0 for n in num_list]
+    evens = [n for n in num_list if n % 2 == 0] 
     # return num_list([n])
     print(evens)
     return evens
@@ -19,3 +19,8 @@ def make_exclamation(sentence_list):
 # make_exclamation(['Hi', 'To','ui'])
 make_exclamation(["Hello", "I'm doing great", "Python is fun"])
 pass
+
+sentence = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+unique_consonants = {c.upper() for c in sentence if c not in "bcdfgklmnovpst ,."}
+
+print(unique_consonants)
